@@ -26,4 +26,8 @@ server.post('/projects/:id/tasks', (req, resp) => {
   return resp.json(project);
 })
 
+server.get('/projects', (req, resp) => {
+  return resp.json(projects);
+})
+
 server.listen(3000);
