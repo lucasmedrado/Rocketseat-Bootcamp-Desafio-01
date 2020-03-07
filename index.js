@@ -15,4 +15,15 @@ server.post('/projects', (req, resp) => {
   return resp.json(projects);
 })
 
+server.post('/projects/:id/tasks', (req, resp) => {
+  const { id } = req.params;
+  const { title } = req.body;
+
+  const project = projects.find(p => p.id == id);
+
+  project.tasks.push(title);
+
+  return resp.json(project);
+})
+
 server.listen(3000);
