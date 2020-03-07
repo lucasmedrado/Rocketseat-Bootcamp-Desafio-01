@@ -4,7 +4,15 @@
   "main": "index.js",
   "author": "Lucas Medrado <lucasmedrado7@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "scripts": {
+    "dev" : "nodemon index.js"
+},
+
+"devDependencies": {
+  "nodemon": "^2.0.2"
+},
+
+"dependencies": {
     "express": "^4.17.1"
   }
 }
